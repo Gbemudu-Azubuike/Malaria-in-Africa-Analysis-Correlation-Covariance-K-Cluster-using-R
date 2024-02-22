@@ -17,6 +17,7 @@ names(Malaria_in_Africa)
 glimpse(Malaria_in_Africa)
 head(Malaria_in_Africa)
 tail(Malaria_in_Africa)
+summary(Malaria_in_Africa)
 
 #Check for null Values
 which(is.na(Malaria_in_Africa))
@@ -97,8 +98,9 @@ mal_n_Afri_norm <- as.data.frame(scale(Malaria_in_Africa))
 view(mal_n_Afri_norm)
 
 #Determining optimal value for k 
-##Elbow method
 set.seed(1234)
+
+##Elbow method
 fviz_nbclust(mal_n_Afri_norm,kmeans, method = "wss")
 
 ##Silhouette method
