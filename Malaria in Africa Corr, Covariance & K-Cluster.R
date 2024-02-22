@@ -108,7 +108,7 @@ fviz_nbclust(mal_n_Afri_norm,kmeans, method = "silhouette")
 
 fviz_nbclust(mal_n_Afri_norm,kmeans, method = "gap_stat")
 
-#Using K=8 for K-Cluster
+#Using K=2 for K-Cluster
 KCluster <- kmeans(mal_n_Afri_norm, centers = 2, nstart = 25)
 str(KCluster)
 
